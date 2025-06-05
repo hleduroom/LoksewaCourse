@@ -1,0 +1,95 @@
+export const courses = [
+  {
+    slug: "psc", // video id
+    title: "Public Service Commission",
+    description: "Prepare for PSC exams with detailed lessons and mock tests.",
+    thumbnail: "/image-psc.jpeg",
+    services: "PSC",
+    subscription: "free",
+    price: null,
+    previewVideoUrl: "/demovideo2.mp4",
+    tutor: {
+      name: "Anil Shrestha",
+      avatar: "https://via.placeholder.com/300x180?text=Engineering",
+      bio: "Senior PSC Trainer with 10+ years of experience.",
+    },
+    rating: 4.6,
+    students: 8500,
+    totalLectures: 2,
+    totalDuration: "16m 15s",
+    chapters: [
+      {
+        title: "Introduction",
+        duration: "5:30",
+        videoUrl: "/videos/psc/introduction.mp4",
+      },
+      {
+        title: "Syllabus Overview",
+        duration: "10:45",
+        videoUrl: "/videos/psc/syllabus-overview.mp4",
+      },
+    ],
+  },
+  {
+    slug: "engineering",
+    title: "Engineering Fundamentals",
+    description: "Courses on Civil, Mechanical, and Computer Engineering.",
+    services: "Engineering",
+    subscription: "paid",
+    price: "Rs. 1299",
+    previewVideoUrl: "/demovideo.mp4",
+    thumbnail: "/image-eng.jpeg",
+    tutor: {
+      name: "Anil Shrestha",
+      avatar: "https://via.placeholder.com/300x180?text=Engineering",
+      bio: "Senior PSC Trainer with 10+ years of experience.",
+    },
+    rating: 4.6,
+    students: 8500,
+    totalLectures: 2,
+    totalDuration: "27m 20s",
+    chapters: [
+      {
+        title: "Civil Basics",
+        duration: "12:00",
+        videoUrl: "/videos/engineering/civil-basics.mp4",
+      },
+      {
+        title: "Computer Architecture",
+        duration: "15:20",
+        videoUrl: "/videos/engineering/computer-architecture.mp4",
+      },
+    ],
+  },
+  {
+    slug: "engineering1",
+    title: "Engineering Fundamentals",
+    description: "Civil and Computer Engineering Essentials.",
+    services: "Engineering",
+    subscription: "paid",
+    price: "Rs. 1299",
+    previewVideoUrl: "/videos/engineering1/preview.mp4",
+    thumbnail: "/image-eng.jpeg",
+    tutor: {
+      name: "Anil Shrestha",
+      avatar: "https://via.placeholder.com/300x180?text=Engineering",
+      bio: "Senior PSC Trainer with 10+ years of experience.",
+    },
+    rating: 4.6,
+    students: 8500,
+    totalLectures: 2,
+    totalDuration: "27m 20s",
+    chapters: [
+      {
+        title: "Engineering Math",
+        duration: "13:00",
+        videoUrl: "/videos/engineering1/engineering-math.mp4",
+      },
+      {
+        title: "Thermodynamics",
+        duration: "14:20",
+        videoUrl: "/videos/engineering1/thermodynamics.mp4",
+      },
+    ],
+  },
+];

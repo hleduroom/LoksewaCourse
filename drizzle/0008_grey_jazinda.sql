@@ -1,0 +1,1 @@
+ALTER TABLE "video" ALTER COLUMN "size" SET DATA TYPE numeric(10, 2);
