@@ -1,4 +1,3 @@
-import { getCourses } from "@/modules/admin/courses/action";
 
 import EBooksPage from "@/components/book/book";
 import LearningHighlight from "@/components/quiz/LearningHighlight";

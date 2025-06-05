@@ -2,8 +2,6 @@ import { getCourse, hasActiveSubscription } from "@/modules/admin/courses/action
 
 import NotFound from "@/components/ui/notFound";
 import CourseDetailClient from "@/components/video/CourseDetailClient";
-import VideoPlayer from "@/components/video/DemoVideoPlayer";
-import PaymentPopup from "@/components/video/videoPayment";
 import { getSessions } from "@/actions/sessions";
 
 export default async function CourseDetailPage({

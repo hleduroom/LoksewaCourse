@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
+import { FaFacebook, FaGithub, } from "react-icons/fa";
 
 import { Button } from "@/components/ui/button";
 
