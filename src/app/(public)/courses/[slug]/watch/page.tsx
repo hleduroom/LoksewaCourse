@@ -5,7 +5,7 @@ import CourseVideoPage from "@/components/video/VideoPlayer";
 import NotFound from "@/components/ui/notFound";
 
 async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = await params;
+  const { slug } = params;
   const course = await getCourse(slug);
 
   if (!course) {
