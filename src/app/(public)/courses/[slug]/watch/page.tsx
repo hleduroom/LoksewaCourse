@@ -4,7 +4,13 @@ import { getCourse, hasActiveSubscription } from "@/modules/admin/courses/action
 import CourseVideoPage from "@/components/video/VideoPlayer";
 import NotFound from "@/components/ui/notFound";
 
-async function Page({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function Page({ params }: PageProps) {
   const { slug } = params;
   const course = await getCourse(slug);
 
@@ -27,5 +33,3 @@ async function Page({ params }: { params: { slug: string } }) {
 
   return <NotFound />;
 }
-
-export default Page;
