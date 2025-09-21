@@ -3,12 +3,7 @@ import { getSessions } from "@/actions/sessions";
 import { getCourse, hasActiveSubscription } from "@/modules/admin/courses/action";
 import CourseVideoPage from "@/components/video/VideoPlayer";
 import NotFound from "@/components/ui/notFound";
-
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
+import type { PageProps } from "@/types/next";
 
 export default async function Page({ params }: PageProps) {
   const { slug } = params;
@@ -25,7 +20,10 @@ export default async function Page({ params }: PageProps) {
   }
 
   if (session?.user?.id) {
-    const activeSubscription = await hasActiveSubscription(session.user.id, course.id);
+    const activeSubscription = await hasActiveSubscription(
+      session.user.id,
+      course.id
+    );
     if (activeSubscription) {
       return <CourseVideoPage course={course} />;
     }
