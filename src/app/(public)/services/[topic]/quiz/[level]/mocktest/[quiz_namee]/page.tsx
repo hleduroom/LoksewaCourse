@@ -1,14 +1,10 @@
 import QuizClient from "@/components/quiz/QuizQuestionPage";
 
-interface QuizPageProps {
-  params: {
-    topic: string;
-    level: string;
-    quiz_namee: string;
-  };
-}
-
-export default function Page({ params }: QuizPageProps) {
+export default function Page({
+  params,
+}: {
+  params: { topic: string; level: string; quiz_namee: string };
+}) {
   return (
     <QuizClient
       topic={params.topic}
