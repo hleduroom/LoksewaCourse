@@ -1,6 +1,6 @@
 import QuizClient from "@/components/quiz/QuizQuestionPage";
 
-interface PageProps {
+interface QuizPageProps {
   params: {
     topic: string;
     level: string;
@@ -8,7 +8,7 @@ interface PageProps {
   };
 }
 
-export default function Page({ params }: PageProps) {
+export default function Page({ params }: QuizPageProps) {
   return (
     <QuizClient
       topic={params.topic}
