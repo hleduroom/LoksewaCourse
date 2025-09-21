@@ -1,10 +1,15 @@
 import QuizClient from "@/components/quiz/QuizQuestionPage";
 
+// Do NOT import or extend any Next.js PageProps
 export default function Page({
   params,
 }: {
-  params: { topic: string; level: string; quiz_namee: string };
-} & Record<string, any>) {
+  params: {
+    topic: string;
+    level: string;
+    quiz_namee: string;
+  };
+}) {
   return (
     <QuizClient
       topic={params.topic}
