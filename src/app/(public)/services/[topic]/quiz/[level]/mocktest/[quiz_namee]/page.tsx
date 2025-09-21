@@ -4,7 +4,7 @@ export default function Page({
   params,
 }: {
   params: { topic: string; level: string; quiz_namee: string };
-}) {
+} & Record<string, any>) {
   return (
     <QuizClient
       topic={params.topic}
