@@ -2,12 +2,13 @@
 
 import { v2 as cloudinary } from "cloudinary";
 
-// const cloudinaryConfig = cloudinary.config({
-//     cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-//     api_key: process.env.CLOUDINARY_API_KEY,
-//     api_secret: process.env.CLOUDINARY_API_SECRET,
-//     secure: true
-// });
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+  secure: true
+});
 
 const UPLOAD_FOLDER = "chapters";
 
@@ -69,7 +70,8 @@ export async function generateSignedPlaybackUrl(
   try {
     const timestamp = Math.floor(Date.now() / 1000) + expireSeconds;
 
-    const url = cloudinary.url.url(publicId, {
+    // FIXED: Changed from cloudinary.url.url() to cloudinary.url()
+    const url = cloudinary.url(publicId, {
       resource_type: "video",
       sign_url: true,
       type: "authenticated", // optional, for added security if you enabled authenticated delivery
@@ -86,21 +88,20 @@ export async function generateSignedPlaybackUrl(
 
 // async function uploadVideo(file: File) {
 //     const { timestamp, signature } = await getSignature()
-
+//
 //     const formData = new FormData()
 //     formData.append("file", file)
 //     formData.append("api_key", process.env.CLOUDINARY_API_KEY!)
 //     formData.append("signature", signature)
 //     formData.append("timestamp", timestamp)
 //     formData.append("folder", "chapters")
-
+//
 //     const CLOUDINARY_UPLOAD_URL = "https://api.cloudinary.com/v1_1/<your-cloud-name>/video/upload"
-
+//
 //     const response = await fetch(CLOUDINARY_UPLOAD_URL, {
 //         method: "POST",
 //         body: formData
 //     })
-
+//
 //     const data = await response.json()
 //     console.log(data)
-// }
